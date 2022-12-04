@@ -1,13 +1,110 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    padding-top: 113px;
+    padding-bottom: 70px;
+    background-color: #6c757d;
+  
+    color: #fff;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+footer {
+    
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    
+    
 }
+.copyright-text{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.chat-btn {
+    position: fixed;
+    right: 14px;
+    bottom: 60px;
+    cursor: pointer;
+    background-color: #495057;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-size: 22px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chat-btn .close {
+    display: none;
+  }
+  
+  #check:checked ~ .chat-btn i {
+    display: block;
+  }
+  
+  #check:checked ~ .chat-btn .comment {
+    display: none;
+  }
+  
+  #check {
+    display: none !important;
+  }
+  
+  #check:checked ~ .chat-wrapper {
+    opacity: 1;
+  }
+  
+  .chat-wrapper {
+    opacity: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 112px;
+    z-index: 2;
+    width: 300px;
+    transition: all 0.4s;
+    background-color: #495057;
+    border-radius: 5px;
+  
+  }
+  
+  .chat-header {
+    background-color: #343a40;
+    padding: 13px;
+    margin-bottom: 10px;
+    border-radius: 5px 5px 0px 0px;
+    color: #fff;
+  }
+  
+  
+  .chat-form {
+    padding: 15px;
+  }
+  
+  .chat-form input,
+  .chat-form textarea,
+  .chat-form button {
+    margin-bottom: 10px;
+  }
+  
+  .chat-form textarea {
+    resize: none;
+  }
+  
+  .form-control:focus,
+  .btn:focus {
+    box-shadow: none;
+  }
+  
+  .cht-msg{
+    max-height: 300px;
+    overflow: auto;
+  }
+
+
+  

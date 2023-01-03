@@ -8,6 +8,7 @@ const ProductForListComponent = ({images, idx}) => {
         <Col lg={5}>
           <LinkContainer to="/product-details">
             <Card.Img
+            crossOrigin="anonymous"
               variant="top"
               src={images}
               className="rounded"

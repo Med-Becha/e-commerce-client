@@ -9,9 +9,11 @@ const ProductCarouselComponent = () => {
 
   return (
    
-    <Carousel fade >
+    <Carousel fade   >
       <Carousel.Item>
         <LinkContainer
+               
+
            style={{ height: "400px", objectFit: "cover" }}
           to="/product-details"
         >

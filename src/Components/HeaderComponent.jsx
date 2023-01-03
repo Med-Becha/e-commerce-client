@@ -12,12 +12,12 @@ import { Link } from "react-router-dom";
 function HeaderComponent() {
   return (
     <div className=" fixed-top">
-      <Navbar bg="dark"  variant="dark">
+      <Navbar className="backgroundNavbar" variant="dark">
         <Container className="">
-          <LinkContainer className="me-auto text-white-50" to="/">
+          <LinkContainer className="me-auto text-white" to="/">
             <Navbar.Brand>React Shop</Navbar.Brand>
           </LinkContainer>
-          <LinkContainer to="/cart" className="text-white-50">
+          <LinkContainer to="/cart" className="text-white">
             <Navbar.Brand>
               <Badge pill bg="danger ">
                 2
@@ -29,7 +29,7 @@ function HeaderComponent() {
         </Container>
       </Navbar>
       {/* second navbar */}
-      <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="md" className="backgroundNavbar" variant="dark">
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -37,12 +37,12 @@ function HeaderComponent() {
               <DropdownButton
                 className="w-100"
                 id="dropdown-item-button"
-                variant="outline-light"
+                variant="outline-info"
                 title="categores"
               >
-                <Dropdown.Item as="button">laptop</Dropdown.Item>
-                <Dropdown.Item as="button">desktop</Dropdown.Item>
-                <Dropdown.Item as="button">screen</Dropdown.Item>
+                <Dropdown.Item className="text-primary" as="button">laptop</Dropdown.Item>
+                <Dropdown.Item className="text-primary" as="button">desktop</Dropdown.Item>
+                <Dropdown.Item className="text-primary"  as="button">screen</Dropdown.Item>
               </DropdownButton>
             </Nav>
             {/* 3 */}
@@ -55,7 +55,7 @@ function HeaderComponent() {
                   className="me-1 "
                   aria-label="Search"
                 />
-                <Button variant="outline-light">
+                <Button variant="outline-info">
                   <i className="bi bi-search"></i>
                 </Button>
               </Form>
@@ -63,13 +63,13 @@ function HeaderComponent() {
             {/* 1 */}
             <Nav className=" mt-1 ">
               <LinkContainer to="/login" className="lg:mx-1">
-                <Button variant="outline-light">Login</Button>
+                <Button variant="outline-info">Login</Button>
               </LinkContainer>
               <LinkContainer to="/register" className="lg:mx-1">
-                <Button variant="outline-light">register</Button>
+                <Button variant="outline-info">register</Button>
               </LinkContainer>
               <LinkContainer to="/admin/orders" className="lg:mx-1">
-                <Button variant="outline-light">
+                <Button variant="outline-info">
                   Admin
                   <span className="p-1 translate-middle position-absolute top-1 start-10 bg-danger border border-light rounded-circle"></span>
                 </Button>
@@ -78,7 +78,7 @@ function HeaderComponent() {
                 <DropdownButton
                   className="w-100"
                   id="dropdown-item-button"
-                  variant="outline-light"
+                  variant="outline-info"
                   title="user name"
                 >
                   <Dropdown.Item as={Link} to="/user/my-orders">

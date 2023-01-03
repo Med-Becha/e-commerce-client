@@ -17,12 +17,12 @@ import UserOrderDetailsPage from "./pages/user/UserOrderDetailsPage";
 import AdminAnalyticsPage from "./pages/Admin/AdminAnalyticsPage";
 import AdminChatsPage from "./pages/Admin/AdminChatsPage";
 import AdminCreateProductPage from "./pages/Admin/AdminCreateProductPage";
-import AdminEditProductPage from "./pages/Admin/AdminAnalyticsPage";
+import AdminEditProductPage from "./pages/Admin/AdminEditProductPage";
 import AdminOrderPage from "./pages/Admin/AdminOrderPage";
 import AdminEditUserPage from "./pages/Admin/AdminEditUserPage";
 import AdminOrderDetailsPage from "./pages/Admin/AdminOrderDetailsPage";
 import AdminProductsPage from "./pages/Admin/AdminProductsPage";
-import AdminUsersPage from "./pages/Admin/AdminProductsPage";
+import AdminUsersPage from "./pages/Admin/AdminUsersPage";
 
 import ScrollTop from "./utils/Scrolltop";
 
@@ -59,9 +59,9 @@ function App() {
           <Route path="/admin/edit-user" element={<AdminEditUserPage />} />
           <Route path="/admin/products" element={<AdminProductsPage />} />
           <Route path="/admin/Create-new-product" element={<AdminCreateProductPage />} />
-          <Route path="/admin/edit-porduct" element={<AdminEditProductPage />} />
+          <Route path="/admin/edit-product" element={<AdminEditProductPage />} />
           <Route path="/admin/orders" element={<AdminOrderPage />} />
-          <Route path="/admin/order-details" element={<AdminOrderDetailsPage />} />
+          <Route path="/admin/order-details/:id" element={<AdminOrderDetailsPage />} />
           <Route path="/admin/chats" element={<AdminChatsPage />} />
           <Route path="admin/analytics" element={<AdminAnalyticsPage />} />
         </Route>
